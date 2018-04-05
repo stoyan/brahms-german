@@ -1,0 +1,96 @@
+.card {
+  border: 1px solid #eee;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0% ,0.2);
+  border-radius: 4px;
+  padding: 30px;
+  margin: 20px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  color: white;
+  padding: 10px 20px;
+  font-size: large;
+  margin-bottom: 10px;
+}
+
+.nextButton {
+  background: #889df0;
+}
+
+.answerButton {
+  background: #50ae6f;
+}
+
+.playButton {
+  background: #96729e;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.settings {
+  text-align: right;
+  padding-right: 20px;
+  font-size: 16px;
+}
+
+.settingsLink {
+  cursor: pointer;
+  text-decoration: none;
+  color: #222;
+}
+
+.settings table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10%;
+}
+
+.settings td, .settings th {
+  text-align: left;
+}
+
+.settings td {
+  border-top: 1px solid #233041;
+}
+
+/* I'm done, let https://davidwalsh.name/css-flip take over */
+
+.flip-container.hover .flipper,
+.flip-container.flip .flipper {
+  transform: rotateY(180deg);
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.2s;
+  transform-style: preserve-3d;
+}
+
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  transform: rotateY(0deg); /* for firefox 31 */
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
